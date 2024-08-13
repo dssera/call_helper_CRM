@@ -1,2 +1,14 @@
 /env
 /.env
+
+static/
+/static/
+*/static/
+
+media/
+/media/
+*/media/
+
+db.sqlite3
+
+*/migrations/
