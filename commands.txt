@@ -1,0 +1,18 @@
+# CREATE DBs AND USERS
+CREATE DATABASE breaks_manager;
+CREATE USER breaks_manager WITH PASSWORD '';
+CREATE DATABASE breaks_manager_dev;
+CREATE USER breaks_manager_dev WITH PASSWORD '';
+
+# CONFIG DBs
+ALTER USER postgres WITH PASSWORD '';
+
+ALTER ROLE breaks_manager SET client_encoding TO 'utf8';
+ALTER ROLE breaks_manager SET default_transaction_isolation TO 'read committed';
+ALTER ROLE breaks_manager SET timezone TO 'Europe/Moscow';
+GRANT ALL PRIVILEGES on database breaks_manager TO breaks_manager;
+
+ALTER ROLE breaks_manager_dev SET client_encoding TO 'utf8';
+ALTER ROLE breaks_manager_dev SET default_transaction_isolation TO 'read committed';
+ALTER ROLE breaks_manager_dev SET timezone TO 'Europe/Moscow';
+GRANT ALL PRIVILEGES on database breaks_manager_dev TO breaks_manager_dev;
